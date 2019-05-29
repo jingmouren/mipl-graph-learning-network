@@ -1,6 +1,6 @@
 #### Graph Learning Network (GLN)
 
-Created by Darwin Saire and AdínRamírez
+Created by Darwin Saire and Adín Ramírez Rivera
 
 ##### Model
 
@@ -12,12 +12,15 @@ We create a set of node embeddings $`\big\{ H^{(l)}_i \big\}_{i=1}^k`$ that are 
 
 If you are using the code/model/data provided here in a publication, please cite our paper:
 
-```
-​```bibtex
-@misc{
-  title = {Graph Learning Network: A Structure Learning Algorithm}
+```bibtex
+@InProceedings{Saire2019,
+  author    = {Saire, D. and Ram\'irez Rivera, A.},
+  title     = {Graph Learning Network: A Structure Learning Algorithm},
+  booktitle = {Workshop on Learning and Reasoning with Graph-Structured Data ({ICMLW} 2019)},
+  year      = {2019},
+  month     = jun,
+  code      = {https://gitlab.com/mipl/graph-learning-network},
 }
-​```
 ```
 
 ##### Setting up 
