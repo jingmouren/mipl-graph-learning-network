@@ -23,6 +23,16 @@ It is possible to change the number of point by surface, the number or type of f
 The code is show in `graph_surface_dataset.py`. For show the samples run `test_create_surface()` function.
 For feed your network use `test_batch_gen()` which show an example for do it using generators by batch.
 
+##### Running
+
+- find the the function `test_batch_gen()` or `test_create_surface` and uncomment it.
+
+- create the paste surf, `mkdir surf`
+
+- run the file, `python3 graph_surface_dataset.py`
+
+  
+
 #### Community Dataset
 This dataset presents the following samples: **2-communities** and **4-communities**.
 It is possible to change the number of individuals by community.
@@ -44,6 +54,12 @@ For feed your network use `test_batch_gen()` which show an example for do it usi
 
 Note: both datasets created graphs with permutations, besides, the number of permutation by graphs is variable.
 
+##### Running
+
+- find the the function `test_batch_gen()` or `test_create_community` and uncomment it.
+- create the paste surf, `mkdir comm`
+- run the file, `python3 graph_communty_dataset.py`
+
 
 
 #### Geometric Figures
@@ -64,3 +80,10 @@ This dataset contain 3 types of geometric figures (square, rectangle and line). 
     <td><img src="imgs/img_18.png" alt="non-trivial image" width="100%" align="center"></td>
   </tr>
 </table>
+
+##### Running
+
+- find the the function `test_batch_gen()` and uncomment it.
+- create the paste surf, `mkdir geo`
+- run the file, `python3 geometric_shape_dataset.py`
+
