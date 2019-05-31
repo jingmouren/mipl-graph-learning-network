@@ -461,14 +461,15 @@ def draw_surface(name, points_coord, adj):
     z = points_coord[:,2]
   else:
     z = np.zeros_like(points_coord[:,0])  
-
+  
+  max_val = np.max(adj)
   list_edges = []
   #plot lines from edges
   for i in range(adj.shape[0]):
     for j in range(i,adj.shape[1]):
       if adj[i][j]:
         line = plt3d.art3d.Line3D([x[i],x[j]], [y[i],y[j]], [z[i],z[j]], \
-          linewidth=0.4, c="black", alpha=1.)
+          linewidth=0.4, c="black", alpha = round( adj[i,j], 4 ))
         list_edges.append((i,j))
         ax.add_line(line)
 

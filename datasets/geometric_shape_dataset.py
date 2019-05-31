@@ -1,7 +1,6 @@
 #import random
 import numpy as np
 #import pymp
-import cv2
 import matplotlib.pyplot as plt
 plt.switch_backend('agg')
 import matplotlib.cm as cm
@@ -14,14 +13,11 @@ epsilon = 1e-12
 class CDisplay:
 
     def display_images( self, img, label, label_by_classes, name ):
-        b, g, r = cv2.split( img )
-        img_rgb = cv2.merge( [ r, g, b ] )
-
         fig = plt.figure()
 
         plt.subplot( 2, 2, 1 )
         plt.title('image, X', fontsize=9)
-        plt.imshow( img_rgb.astype(np.uint8) )
+        plt.imshow( img.astype(np.uint8) )
 
         plt.subplot( 2, 2, 2 )
         plt.title('label, Y', fontsize=9)
@@ -39,14 +35,11 @@ class CDisplay:
         fig.savefig( name, dpi = fig.dpi )
 
     def display_results( self, img, label, pred, name ):
-        b, g, r = cv2.split( img )
-        img_rgb = cv2.merge( [ r, g, b ] )
-
         fig = plt.figure()
 
         plt.subplot( 1, 3, 1 )
         plt.title('image, X', fontsize=9)
-        plt.imshow( img_rgb.astype(np.uint8) )
+        plt.imshow( img.astype(np.uint8) )
 
         plt.subplot( 1, 3, 2 )
         plt.title('label, Y', fontsize=9)
@@ -593,13 +586,11 @@ class GenerateImg:
         label_list.append( class_blue )
         label_list.append( class_red )
         label_all = np.dstack( label_list ).astype( np.float32 ) # 2 classes generates
-        r, g, b = cv2.split( img )
-        img_bgr = cv2.merge( [ b, g, r ] )
 
         gen_adj = GenerateAdjMatrx( type_dist = self.type_dist )
         A_gt = gen_adj.adjmatrx_groundthuth( img_ground_truth )
 
-        return img_bgr, img_ground_truth, label_all, A_gt
+        return img, img_ground_truth, label_all, A_gt
 
     def batch_generator( self, db_img, db_label, db_label_split, db_A_gt ):
         def gen_batch( batch_size ):
