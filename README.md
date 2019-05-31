@@ -26,7 +26,7 @@ If you are using the code/model/data provided here in a publication, please cite
 # Setting up 
 
 - Get this repo, `git clone https://gitlab.com/mipl/graph-learning-network`
-- Get a docker env with tensorflow 1.9, sklearn, numpy, opencv3, python3, for example, `docker push darwinsp/tf-opencv-py3:tagname`
+- Get a docker env with tensorflow 1.9, sklearn, numpy, opencv3, python3, for example, [DockerGLN](https://github.com/DarwinSaire/DockerGLN).
 
 ## Run the Model
 
